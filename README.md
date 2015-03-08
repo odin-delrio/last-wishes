@@ -1,3 +1,5 @@
+# Fork of Last wishes to make some examples of XSS and CSRF attacks.
+
 # Last Wishes - DDD Sample Application
 
 [![Build Status](https://secure.travis-ci.org/dddinphp/last-wishes.svg?branch=master)](http://travis-ci.org/dddinphp/last-wishes)
@@ -18,6 +20,8 @@
 
 ## Run your Last Will bounded context
     sudo php -S last-wishes.local:80 -t src/Lw/Infrastructure/Ui/Web/Silex/Public
+    ## For the attack examples
+    sudo php -S csrf-attacker.local:8080 -t src/CSRF/
 
 ## Notify all domain events via messaging
     php bin/console domain:events:spread
