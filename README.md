@@ -3,8 +3,8 @@
 [![Build Status](https://secure.travis-ci.org/dddinphp/last-wishes.svg?branch=master)](http://travis-ci.org/dddinphp/last-wishes)
 
 ## Add hosts to local machine
-    sudo -- sh -c "echo 127.0.0.100 last-wishes.local >> /etc/hosts"
-    sudo -- sh -c "echo 127.0.0.101 csrf-attacker.local >> /etc/hosts"
+    sudo -- sh -c "echo 127.0.0.1 last-wishes.local >> /etc/hosts"
+    sudo -- sh -c "echo 127.0.0.1 csrf-attacker.local >> /etc/hosts"
     
 ## Install assets
     bower install
