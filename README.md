@@ -17,7 +17,7 @@
     php bin/doctrine orm:schema-tool:create
 
 ## Run your Last Will bounded context
-    php -S last-wishes.local -t src/Lw/Infrastructure/Ui/Web/Silex/Public
+    sudo php -S last-wishes.local:80 -t src/Lw/Infrastructure/Ui/Web/Silex/Public
 
 ## Notify all domain events via messaging
     php bin/console domain:events:spread
