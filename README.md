@@ -1,4 +1,7 @@
 # Fork of Last wishes to make some examples of XSS and CSRF attacks.
+    
+Slides explaining these attacks:
+http://slides.com/odindelrio/xss-csrf-explained
 
 # Last Wishes - DDD Sample Application
 
