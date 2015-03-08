@@ -2,6 +2,10 @@
 
 [![Build Status](https://secure.travis-ci.org/dddinphp/last-wishes.svg?branch=master)](http://travis-ci.org/dddinphp/last-wishes)
 
+## Add hosts to local machine
+    sudo -- sh -c "echo 127.0.0.100 last-wishes.local >> /etc/hosts"
+    sudo -- sh -c "echo 127.0.0.101 csrf-attacker.local >> /etc/hosts"
+    
 ## Install assets
     bower install
 
@@ -13,7 +17,7 @@
     php bin/doctrine orm:schema-tool:create
 
 ## Run your Last Will bounded context
-    php -S localhost:8080 -t src/Lw/Infrastructure/Ui/Web/Silex/Public
+    php -S last-wishes.local -t src/Lw/Infrastructure/Ui/Web/Silex/Public
 
 ## Notify all domain events via messaging
     php bin/console domain:events:spread
